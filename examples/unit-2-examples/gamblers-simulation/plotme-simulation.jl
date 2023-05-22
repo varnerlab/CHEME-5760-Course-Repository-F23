@@ -12,7 +12,7 @@ colors[6] = colorant"#EE3377"
 colors[7] = colorant"#BBBBBB"
 
 # run the simulation -
-wₒ = 1.0; # what we are willing to risk
+wₒ = 10.0; # what we are willing to risk
 N = 1000; # number of flips -
 M = 100;  # number of players
 data = simulate(wₒ; N = N, M = M);
@@ -35,4 +35,4 @@ xlabel!("Flip index", fontsize=18);
 ylabel!("Cumulative Reward (USD)", fontsize=18);
 
 # save fig -
-# savefig(joinpath(_PATH_TO_FIGS, "Fig-CoinFlip-Game-Simulation-Range.pdf"))
+savefig(joinpath(_PATH_TO_FIGS, "Fig-CoinFlip-Game-Simulation-Range-W10.pdf"))
