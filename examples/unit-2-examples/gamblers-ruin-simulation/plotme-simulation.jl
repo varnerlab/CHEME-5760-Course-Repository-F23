@@ -35,4 +35,4 @@ xlabel!("Flip index", fontsize=18);
 ylabel!("Cumulative Reward (USD)", fontsize=18);
 
 # save fig -
-savefig(joinpath(_PATH_TO_FIGS, "Fig-CoinFlip-Game-Simulation-Range.pdf"))
+# savefig(joinpath(_PATH_TO_FIGS, "Fig-CoinFlip-Game-Simulation-Range.pdf"))
