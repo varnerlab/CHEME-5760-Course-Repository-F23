@@ -2,7 +2,7 @@
 using ForwardDiff
 
 # define the utility function U(w), and its derivative U'(w) -
-U(w) = log(w+1)
+U(w) = 0.1*w+0.01
 
 # setup the wealth range -
 wealth_array = 1.0:1.0:100.0 |> collect;
