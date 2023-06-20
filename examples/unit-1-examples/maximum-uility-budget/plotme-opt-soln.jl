@@ -31,7 +31,7 @@ BC = budget(problem, xlim)
 plot!(INC[:,1],INC[:,2],label="", lw=3, c=colors[1],
     bg="floralwhite", background_color_outside="white", framestyle = :box, fg_legend = :transparent);
 plot!(BC[:,1],BC[:,2], label="Budget $(budget_value)", lw=3,c=colors[4], xlim = xlim, ylim = ylim)
-scatter!([xopt[1]], [xopt[2]], ms=4, c="white", mec=colors[1], label="")
+scatter!([xopt[1]], [xopt[2]], ms=4, c="white", mec=colors[4], label="")
 xlabel!("Units of Good or Service 1 Consumed", fontsize=18)
 ylabel!("Units of Good or Service 2 Consumed", fontsize=18)
 
