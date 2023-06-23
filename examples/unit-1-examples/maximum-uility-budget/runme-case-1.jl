@@ -1,4 +1,4 @@
-# include the include -
+# include the include (load the reqd packages) -
 include("Include.jl")
 
 # initialize -
@@ -20,16 +20,5 @@ problem = build(MySimpleCobbDouglasChoiceProblem, (
     ]
 ));
 
-results = solve(problem);
-
-# tests -
-xopt = results["argmax"];
-x1_opt = round(xopt[1]; sigdigits=6)
-x2_opt = round(xopt[2]; sigdigits=6)
-Ū₁ = α[1]*(x1_opt^(α[1]-1))*(x2_opt^(1-α[1]))
-Ū₂ = (1-α[1])*(x1_opt^(α[1]))*(x2_opt^(-α[1]))
-λ = Ū₁/c[1]
-F1 = Ū₁ -λ*c[1]
-F2 = Ū₂ -λ*c[2]
-F3 = 100.0 - (c[1]*x1_opt + c[2]*x2_opt)
-(F1,F2,F3)
+# call tghe solve function. This will return a dictionary -
+solution = solve(problem);
